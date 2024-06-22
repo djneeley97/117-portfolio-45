@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}about me {% endblock title%}
+{% load static %}
+{% block content%}
+
+<section class="about-section center-align">
+    <div class="about-img-container center-align">
+        <img src="{% static 'img/nikoooo - Copy.PNG' %}" alt="">
+    </div>
+    <div class="about-description-container center-column">
+        <h1>UI / UX</h1>
+        <h2>Daniel Neeley</h2>
+
+        <p>As a beginner full stack developer, I possess a solid foundation in both front-end and back-end
+            technologies. On the front-end, I am proficient in HTML, CSS, and JavaScript, enabling me to create
+            interactive and visually appealing user interfaces. I also have experience with popular frameworks like
+            React.js, allowing me to build dynamic web applications efficiently. On the back-end side, I have
+            knowledge of server-side languages such as Node.js and Python, along with frameworks like Django.
+            This enables me to develop robust APIs and handle database operations effectively. Additionally,
+            I have a keen eye for troubleshooting and debugging, essential skills for ensuring smooth functionality
+            across the entire stack. With a dedication to continuous learning and a passion for problem-solving, I
+            am eager to contribute and grow as a full stack developer. <br> <br>
+
+            I find immense enjoyment in UI/UX design because it allows me to merge creativity with practical
+            problem-solving. Crafting intuitive and visually appealing user interfaces that enhance user experience
+            excites me. I love the challenge of understanding user needs, behaviors, and preferences to design
+            interfaces that are not only aesthetically pleasing but also highly functional and easy to navigate.
+            It's incredibly rewarding to see how small design tweaks can make a significant impact on how users
+            interact with a product or application. The dynamic nature of UI/UX design keeps me engaged, as I
+            continuously seek to innovate and refine designs based on feedback and emerging trends. Ultimately,
+            knowing that my designs positively impact users' lives drives my passion for UI/UX design, making it a
+            fulfilling and gratifying endeavor for me.</p>
+
+        <div class="label-container center-align">
+            <h2>skills</h2>
+        </div>
+
+        <div class="label-list center-align">
+            <label class="label-text">figma</label>
+            <label class="label-text">responsive design</label>
+            <label class="label-text">html</label>
+            <label class="label-text">css</label>
+            <label class="label-text">prototyping</label>
+            <label class="label-text">usability</label>
+            <label class="label-text">python</label>
+            <label class="label-text">django</label>
+            <label class="label-text">scrum</label>
+            <label class="label-text">agile</label>
+        </div>
+
+    </div>
+</section>
+{% endblock content%}
