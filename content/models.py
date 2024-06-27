@@ -17,3 +17,4 @@ class Project(models.Model):
     image = models.ImageField(upload_to='projects_images/')
     repository = models.URLField()
     technologies = models.ManyToManyField(Technology)
+

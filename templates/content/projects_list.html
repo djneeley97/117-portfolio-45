@@ -5,76 +5,32 @@
 {% block content%}
 
 <section class="projects center-column">
+    {% if user.is_authenticated %}
+    <a class="btn-primary" href="{% url 'project_new' %}">
+        Add Project
+    </a>
+    {% endif %}
+
     <h2>Projects</h2>
 
     <div class="project-list">
-
+        {% for project in projects %}
         <div class="project-card">
-            <a href="https://github.com/" target="_blank">
-                <img src="{% static '/img/picture-1.jpg' %}" alt="">
-                <p>First Project</p>
-                <p>This is the description</p>
-                <p>YYYY</p>
+            <a href="{{ project.repository }}" target="_blank">
+                <img src="{{ project.image.url }}" alt="">
+                <p>{{ project.name }}</p>
+                <p>{{ project.description }}</p>
+                <p>{{ project.year }}</p>
 
                 <div class="skills-list center-align">
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
+                    {% for tech in project.technologies.all %}
+                    <label class="label-text">{{ tech.name }}</label>
+                    {% endfor %}
                 </div>
             </a>
         </div>
+        {% endfor %}
 
-
-        <div class="project-card">
-            <a href="https://github.com/" target="_blank">
-                <img src="{% static '/img/picture-1.jpg' %}" alt="">
-                <p>First Project</p>
-                <p>This is the description</p>
-                <p>YYYY</p>
-
-                <div class="skills-list center-align">
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="project-card">
-            <a href="https://github.com/" target="_blank">
-                <img src="{% static '/img/picture-1.jpg' %}" alt="">
-                <p>First Project</p>
-                <p>This is the description</p>
-                <p>YYYY</p>
-
-                <div class="skills-list center-align">
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="project-card">
-            <a href="https://github.com/" target="_blank">
-                <img src="{% static '/img/picture-1.jpg' %}" alt="">
-                <p>First Project</p>
-                <p>This is the description</p>
-                <p>YYYY</p>
-
-                <div class="skills-list center-align">
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                    <label class="label-text">html</label>
-                </div>
-            </a>
-        </div>
     </div>
 </section>
 {% endblock content %}
